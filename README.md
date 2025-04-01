@@ -1,4 +1,4 @@
-# Discord Bot
+# WellsBot
 
 This Discord bot monitors a specific user in voice channels and automatically moves them to an AFK channel when they are deafened.
 
