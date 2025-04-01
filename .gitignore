@@ -1,0 +1,5 @@
+.env
+/sounds/*
+*backup.py
+DiscordSoundboard.ahk
+.venv
