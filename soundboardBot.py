@@ -108,6 +108,11 @@ class Soundboard(commands.Cog):
         else:
             voice_client = interaction.guild.voice_client
 
+        # Check if already playing
+        if voice_client.is_playing():
+            await interaction.response.send_message("A sound is already playing. Please wait for it to finish.", ephemeral=True)
+            return
+
         sound_path = os.path.join(SOUNDS_DIR, sound_name)
         voice_client.play(discord.FFmpegPCMAudio(sound_path))
         await interaction.response.defer()
